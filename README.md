@@ -1,5 +1,3 @@
-![kucing](./image.png)
-
 ## Getting Started
 
 First, run the development server:
