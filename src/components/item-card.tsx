@@ -1,15 +1,32 @@
 import React from "react";
 
-interface DogProps {
+interface Pokemon {
+  id: number;
   name: string;
+  genus: string;
+  description: string;
   imageUrl: string;
+  types: string[];
 }
 
-const ItemCard: React.FC<DogProps> = ({ name, imageUrl }) => {
+interface Props {
+  pokemon: Pokemon;
+}
+
+const ItemCard: React.FC<Props> = ({ pokemon }) => {
   return (
     <div className="card">
-      <img src={imageUrl} alt={name} width="400" height="400" />
-      <h2>{name}</h2>
+      <img className="card-img" src={pokemon.imageUrl} alt={pokemon.name} />
+      <h2>{pokemon.name}</h2>
+      <p>{pokemon.genus}</p>
+      <p>{pokemon.description}</p>
+      <div className="card-types">
+        {pokemon.types.map((type, index) => (
+          <span key={index} className="type-label">
+            {type}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };

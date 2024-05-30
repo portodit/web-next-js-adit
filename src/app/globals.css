@@ -1,72 +1,65 @@
-/* Reset CSS */
-* {
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #333;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.main {
   padding: 20px;
 }
 
-.card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.card h2 {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #333;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 kolom */
+    grid-template-rows: repeat(2, 1fr); /* 2 baris */
+    gap: 20px; /* Jarak antar item */
+  
 }
 
-.card p {
-  font-size: 1rem;
-  color: #777;
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.flex {
+.card-types {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
-.justify-center {
-  justify-content: center;
+.type-label {
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 5px;
 }
 
-/* Hover Effect */
-.card:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+p {
+  margin: 5px 0;
 }
